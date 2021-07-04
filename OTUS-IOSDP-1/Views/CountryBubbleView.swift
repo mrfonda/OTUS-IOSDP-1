@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct CountryBubbleView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     var country: Country
     
     var body: some View {
         CountryThumbnailView(country: country)
             .padding()
+//            .background(colorScheme == .light ? Color.white : Color.black)
+//            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+            
             .background(Color.white)
+            .foregroundColor(Color.black)
             .modifier(CardModifier())
     }
 }
@@ -23,6 +29,6 @@ struct CountryBubbleView_Previews: PreviewProvider {
         CountryBubbleView(country: Country(
                             id: "BE",
                             name: "Belgium",
-                            imageURL: URL(string: "https://www.countryflags.io/be/flat/64.png")))
+                            imageURL: URL(string: "https://www.countryflags.io/be/flat/64.png"))).preferredColorScheme(.dark)
     }
 }

@@ -21,6 +21,7 @@ struct OTUS_IOSDP_1App: App {
                 .environmentObject(CountriesService())
                 .environment(\.urlImageService, urlImageService)
                 .environmentObject(HolidaysModel(loader: HolidaysLoader()))
+                .accentColor(.orange )
         }
     }
 }

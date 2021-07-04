@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct CardModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+
     func body(content: Content) -> some View {
         content
             .cornerRadius(16.0)
-            .shadow(color: Color.black.opacity(0.25),
-                    radius: 11,
-                    x: 0.0,
-                    y: 2.0)
+            .shadow(
+                color: colorScheme == .dark ? Color.white.opacity(0.75) : Color.black.opacity(0.25),
+                radius: 11,
+                x: 0.0,
+                y: 2.0)
             .padding(EdgeInsets(
                         top: 0,
                         leading: 8,

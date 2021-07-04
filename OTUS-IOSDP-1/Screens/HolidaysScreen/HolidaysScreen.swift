@@ -11,7 +11,8 @@ import URLImage
 struct HolidaysScreen: View {
     @EnvironmentObject var router: Router
     @ObservedObject var viewModel: HolidaysModel
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         switch viewModel.output {
         case .success(let holidays):
@@ -27,9 +28,9 @@ struct HolidaysScreen: View {
                                 Text(holiday.type[i])
                                     .fontWeight(.light)
                                     .font(Font.footnote)
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(colorScheme == .light ? Color.white : Color.black)
                                     .padding(4)
-                                    .background(Color.purple.luminanceToAlpha())
+                                    .background(Color.gray)
                                     .cornerRadius(8)
                             }
                             
