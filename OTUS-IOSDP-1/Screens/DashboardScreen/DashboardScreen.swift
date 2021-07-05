@@ -25,9 +25,12 @@ struct DashboardScreen: View {
                     CountryBubbleView(country: lastCountry)
                         .onTapGesture {
                             
-                            router.openedCountryCode =  lastCountry.id
-                        
-                            router.mainTabSelection = MainScreen.MainScreenTabs.countries.rawValue
+                            withAnimation {
+                                router.openedCountryCode =  lastCountry.id
+                                
+                                router.mainTabSelection = MainScreen.MainScreenTabs.countries.rawValue
+                            }
+                            
                         }
                 }
             }
@@ -38,10 +41,12 @@ struct DashboardScreen: View {
                     CountryBubbleView(country: randomCountry)
                         .onTapGesture {
                             
-                            router.openedCountryCode =  randomCountry.id
                             
-                            router.mainTabSelection = MainScreen.MainScreenTabs.countries.rawValue
                             
+                            withAnimation {
+                                router.openedCountryCode =  randomCountry.id
+                                router.mainTabSelection = MainScreen.MainScreenTabs.countries.rawValue
+                            }
                         }
                 }
             }

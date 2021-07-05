@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import URLImage
 
 struct CountriesScreen: View {
@@ -55,11 +56,24 @@ struct CountriesScreen: View {
                                     holidaysViewModel.country = country.id
                                 }
                                 .background(NavigationLink(destination: holidayScreen(country: country), tag: country.id, selection: $router.openedCountryCode) { EmptyView() })
-                    }.listStyle(PlainListStyle())
+                    }
+                    .onReceive(Just(router.openedCountryCode)) {
+                        if let code = $0 {
+                            withAnimation() {
+                                proxy.scrollTo(code)
+                                holidaysViewModel.country = code
+                                isShowingHolidaysScreen = true
+                            }
+                        }
+                    }
+                    .listStyle(PlainListStyle())
                     .background(
                         navigationLink
                     )
                     .onAppear() {
+                        
+                       
+                        
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         isShowingHolidaysScreen = false
                         if let code = router.openedCountryCode {

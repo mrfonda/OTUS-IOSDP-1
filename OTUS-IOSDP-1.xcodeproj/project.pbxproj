@@ -136,11 +136,11 @@
 		761759F02690C06000A4259B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				76175A3226914DD200A4259B /* ThirdScreen */,
-				76175A1C2690EE4800A4259B /* HolidaysScreen */,
 				761759F32690C06000A4259B /* MainScreen.swift */,
 				76175A102690E18100A4259B /* DashboardScreen */,
 				761759F12690C06000A4259B /* CountriesScreen */,
+				76175A1C2690EE4800A4259B /* HolidaysScreen */,
+				76175A3226914DD200A4259B /* ThirdScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
