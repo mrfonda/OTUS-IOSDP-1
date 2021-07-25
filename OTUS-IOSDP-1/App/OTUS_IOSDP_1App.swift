@@ -16,11 +16,11 @@ struct OTUS_IOSDP_1App: App {
 
     var body: some Scene {
         WindowGroup {
+//            CountryScreen()
             MainScreen()
                 .environmentObject(Router())
                 .environmentObject(CountriesService())
                 .environment(\.urlImageService, urlImageService)
-                .environmentObject(HolidaysModel(loader: HolidaysLoader()))
                 .accentColor(.orange )
         }
     }

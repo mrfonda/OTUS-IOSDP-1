@@ -14,7 +14,7 @@ struct DashboardScreen: View {
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
             
-            Text("Holidays in")
+            Text("Information about countries")
                 .font(Font.headline)
             
             
@@ -27,7 +27,6 @@ struct DashboardScreen: View {
                             
                             withAnimation {
                                 router.openedCountryCode =  lastCountry.id
-                                
                                 router.mainTabSelection = MainScreen.MainScreenTabs.countries.rawValue
                             }
                             

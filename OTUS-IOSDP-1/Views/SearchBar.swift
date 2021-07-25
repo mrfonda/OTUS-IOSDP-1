@@ -13,19 +13,53 @@ import Combine
 
 
 struct SearchView: UIViewRepresentable {
-    let controller = UISearchController()
+
+    final class Coordinator: NSObject, UISearchControllerDelegate {
+        var controller : UISearchController
+        
+        init(searchController: UISearchController) {
+            controller = searchController
+            super.init()
+        }
+        
+        func resign() {
+            controller.resignFirstResponder()
+            
+            controller.searchBar.resignFirstResponder()
+            controller.isActive = false
+            controller.showsSearchResultsController = false
+            controller.searchBar.text = nil
+            controller.searchBar.showsCancelButton = false
+
+            controller.searchBar.endEditing(true)
+        }
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            resign()
+        }
+    }
+
+    
+    func makeCoordinator() -> Coordinator {
+        let controller = UISearchController()
+        let coordinator = Coordinator(searchController: controller)
+        controller.delegate = coordinator
+        return coordinator
+    }
     
     @ObservedObject var searchModel: CountriesService
     
     func makeUIView(context: UIViewRepresentableContext<SearchView>) -> UISearchBar {
-        
-        self.controller.searchBar.searchTextField.addTarget(searchModel, action: #selector(searchModel.textFieldDidChange), for: .editingChanged)
 
-        return self.controller.searchBar
+        context.coordinator.controller.searchBar.searchTextField.addTarget(searchModel, action: #selector(searchModel.textFieldDidChange), for: .editingChanged)
+
+        return context.coordinator.controller.searchBar
     }
 
     func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchView>) {
-//        uiView.text = searchModel.searchText
+        if uiView.text == nil || uiView.text?.isEmpty == true {
+            context.coordinator.resign()
+        }
     }
     
     typealias UIViewType = UISearchBar

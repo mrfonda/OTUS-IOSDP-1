@@ -15,9 +15,6 @@ struct CountryBubbleView: View {
     var body: some View {
         CountryThumbnailView(country: country)
             .padding()
-//            .background(colorScheme == .light ? Color.white : Color.black)
-//            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-            
             .background(Color.white)
             .foregroundColor(Color.black)
             .modifier(CardModifier())

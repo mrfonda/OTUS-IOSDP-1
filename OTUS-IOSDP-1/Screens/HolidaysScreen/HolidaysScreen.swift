@@ -9,7 +9,7 @@ import SwiftUI
 import URLImage
 
 struct HolidaysScreen: View {
-    @EnvironmentObject var router: Router
+
     @ObservedObject var viewModel: HolidaysModel
     @Environment(\.colorScheme) var colorScheme
 
@@ -41,8 +41,6 @@ struct HolidaysScreen: View {
                         .font(Font.footnote)
                 }
                 
-            }.onAppear() {
-                viewModel.country = router.openedCountryCode ?? ""
             }
 
         case .failure(let error):

@@ -13,33 +13,13 @@ struct CountriesScreen: View {
     @EnvironmentObject var countriesService: CountriesService
     @EnvironmentObject var router: Router
     @EnvironmentObject var holidaysViewModel: HolidaysModel
+    @State var openedCountry: String? = nil
     
-    @State var isShowingHolidaysScreen: Bool = false
-    
-    func holidayScreen(country: Country) -> some View {
-        
-        return HolidaysScreen(
-            viewModel: holidaysViewModel)
+    func countryScreen(country: Country) -> some View {
+        return CountryScreen(model: CountryScreenModel(country: country))
             .onAppear() {
-                
                 router.lastCountry = country
             }
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    CountryThumbnailView(country: country)
-                }
-            }
-            .navigationTitle(country.name)
-    }
-    
-    var navigationLink: NavigationLink<EmptyView, HolidaysScreen>? {
-        if let code = router.openedCountryCode,
-           let country = countriesService.country(byCode: code),
-           let view = holidayScreen(country: country) as? HolidaysScreen {
-            return NavigationLink(destination: view, isActive: $isShowingHolidaysScreen) { EmptyView() }
-        } else {
-            return nil
-        }
     }
     
     var body: some View {
@@ -48,45 +28,36 @@ struct CountriesScreen: View {
                 VStack {
                     SearchView(searchModel: countriesService)
                     List(countriesService.filtered) { country in
-                            CountryThumbnailView(country: country)
-                                .frame(height: 48)
-                                .onTapGesture {
-                                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                                    router.openedCountryCode =  country.id
-                                    holidaysViewModel.country = country.id
-                                }
-                                .background(NavigationLink(destination: holidayScreen(country: country), tag: country.id, selection: $router.openedCountryCode) { EmptyView() })
+                        CountryThumbnailView(country: country)
+                            .frame(height: 48)
+                            .onTapGesture {
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                router.openedCountryCode = country.id
+                                openedCountry = country.id
+                            }
+                            .background(NavigationLink(destination: countryScreen(country: country), tag: country.id, selection: $openedCountry) { EmptyView() })
+                            
                     }
-                    .onReceive(Just(router.openedCountryCode)) {
-                        if let code = $0 {
+                    .onReceive(Just(router.openedCountryCode).delay(for: 0, scheduler: DispatchQueue.main)) {
+                        if let code = $0, openedCountry != code {
+                            countriesService.searchText = ""
                             withAnimation() {
                                 proxy.scrollTo(code)
-                                holidaysViewModel.country = code
-                                isShowingHolidaysScreen = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                                    openedCountry = router.openedCountryCode
+                                }
                             }
+                        }
+                        
+                        if $0 == nil {
+                            openedCountry = nil
                         }
                     }
                     .listStyle(PlainListStyle())
-                    .background(
-                        navigationLink
-                    )
                     .onAppear() {
-                        
-                       
-                        
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                        isShowingHolidaysScreen = false
-                        if let code = router.openedCountryCode {
-                            withAnimation() {
-                                proxy.scrollTo(code)
-                                holidaysViewModel.country = code
-                                isShowingHolidaysScreen = true
-                            }
-                        }
                     }
                 }
-                
-                
                 .navigationBarTitle("Explore holidays in...")
             }
         }

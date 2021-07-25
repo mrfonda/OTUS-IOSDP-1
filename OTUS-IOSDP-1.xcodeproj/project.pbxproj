@@ -33,6 +33,15 @@
 		76175A3126910B7200A4259B /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3026910B7200A4259B /* Publisher+Extensions.swift */; };
 		76175A3426914E3600A4259B /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3326914E3600A4259B /* ThirdScreen.swift */; };
 		76175A36269151BA00A4259B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A35269151BA00A4259B /* SearchBar.swift */; };
+		7642FFF526AB334500DB937F /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7642FFF426AB334500DB937F /* Networking */; };
+		7642FFF726AB4DF500DB937F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFF626AB4DF500DB937F /* AppSettings.swift */; };
+		7642FFFA26AB578200DB937F /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFF926AB578200DB937F /* NewsScreen.swift */; };
+		7642FFFC26AB57C600DB937F /* NewsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFFB26AB57C600DB937F /* NewsScreenModel.swift */; };
+		7642FFFE26AB610F00DB937F /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFFD26AB610F00DB937F /* TextAlert.swift */; };
+		7649104126AB6DC60087784B /* RandomAccessCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649104026AB6DC60087784B /* RandomAccessCollection.swift */; };
+		768F1CFB26AC89DC00B0853E /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 768F1CFA26AC89DC00B0853E /* NavigationStack */; };
+		769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F86EF26AB234D0030F85A /* CountryScreen.swift */; };
+		769F870E26AB323E0030F85A /* CountryScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F870D26AB323E0030F85A /* CountryScreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +82,14 @@
 		76175A3026910B7200A4259B /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		76175A3326914E3600A4259B /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		76175A35269151BA00A4259B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		7642FFF626AB4DF500DB937F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7642FFF926AB578200DB937F /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		7642FFFB26AB57C600DB937F /* NewsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenModel.swift; sourceTree = "<group>"; };
+		7642FFFD26AB610F00DB937F /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
+		7649104026AB6DC60087784B /* RandomAccessCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollection.swift; sourceTree = "<group>"; };
+		769F86EF26AB234D0030F85A /* CountryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreen.swift; sourceTree = "<group>"; };
+		769F870C26AB31290030F85A /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Networking; path = Modules/Networking; sourceTree = "<group>"; };
+		769F870D26AB323E0030F85A /* CountryScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7642FFF526AB334500DB937F /* Networking in Frameworks */,
+				768F1CFB26AC89DC00B0853E /* NavigationStack in Frameworks */,
 				76175A0F2690DA9C00A4259B /* URLImageStore in Frameworks */,
 				76175A0C2690CC7F00A4259B /* URLImage in Frameworks */,
 			);
@@ -98,6 +117,7 @@
 		7613260426909D2A0023AD33 = {
 			isa = PBXGroup;
 			children = (
+				769F870C26AB31290030F85A /* Networking */,
 				7613260F26909D2A0023AD33 /* OTUS-IOSDP-1 */,
 				761759FF2690C46900A4259B /* OTUS-IOSDP-1Tests */,
 				7613260E26909D2A0023AD33 /* Products */,
@@ -136,6 +156,7 @@
 		761759F02690C06000A4259B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				769F86EE26AB23360030F85A /* CountryScreen */,
 				761759F32690C06000A4259B /* MainScreen.swift */,
 				76175A102690E18100A4259B /* DashboardScreen */,
 				761759F12690C06000A4259B /* CountriesScreen */,
@@ -186,6 +207,7 @@
 				76175A142690E4A900A4259B /* CountryThumbnailView.swift */,
 				76175A192690EBBD00A4259B /* CountryBubbleView.swift */,
 				76175A35269151BA00A4259B /* SearchBar.swift */,
+				7642FFFD26AB610F00DB937F /* TextAlert.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 				7613261026909D2A0023AD33 /* OTUS_IOSDP_1App.swift */,
 				7613261426909D2D0023AD33 /* Assets.xcassets */,
 				7613261926909D2D0023AD33 /* Info.plist */,
+				7642FFF626AB4DF500DB937F /* AppSettings.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -244,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				76175A2F26910B5C00A4259B /* Publisher */,
+				7649104026AB6DC60087784B /* RandomAccessCollection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +286,25 @@
 				76175A3326914E3600A4259B /* ThirdScreen.swift */,
 			);
 			path = ThirdScreen;
+			sourceTree = "<group>";
+		};
+		7642FFF826AB577200DB937F /* NewsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7642FFF926AB578200DB937F /* NewsScreen.swift */,
+				7642FFFB26AB57C600DB937F /* NewsScreenModel.swift */,
+			);
+			path = NewsScreen;
+			sourceTree = "<group>";
+		};
+		769F86EE26AB23360030F85A /* CountryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7642FFF826AB577200DB937F /* NewsScreen */,
+				769F86EF26AB234D0030F85A /* CountryScreen.swift */,
+				769F870D26AB323E0030F85A /* CountryScreenModel.swift */,
+			);
+			path = CountryScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +326,8 @@
 			packageProductDependencies = (
 				76175A0B2690CC7F00A4259B /* URLImage */,
 				76175A0E2690DA9C00A4259B /* URLImageStore */,
+				7642FFF426AB334500DB937F /* Networking */,
+				768F1CFA26AC89DC00B0853E /* NavigationStack */,
 			);
 			productName = "OTUS-IOSDP-1";
 			productReference = 7613260D26909D2A0023AD33 /* OTUS-IOSDP-1.app */;
@@ -335,6 +380,7 @@
 			mainGroup = 7613260426909D2A0023AD33;
 			packageReferences = (
 				76175A0A2690CC7F00A4259B /* XCRemoteSwiftPackageReference "url-image" */,
+				768F1CF926AC89DC00B0853E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 			);
 			productRefGroup = 7613260E26909D2A0023AD33 /* Products */;
 			projectDirPath = "";
@@ -371,14 +417,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				761759F72690C06000A4259B /* MainScreen.swift in Sources */,
+				769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */,
+				7642FFFC26AB57C600DB937F /* NewsScreenModel.swift in Sources */,
+				7649104126AB6DC60087784B /* RandomAccessCollection.swift in Sources */,
 				76175A152690E4A900A4259B /* CountryThumbnailView.swift in Sources */,
 				76175A2A26910A9A00A4259B /* InputPropertyWrapper.swift in Sources */,
 				76175A2826910A6400A4259B /* Holiday.swift in Sources */,
 				76175A2D26910AC200A4259B /* DateFormatters.swift in Sources */,
 				761759F52690C06000A4259B /* CountriesScreen.swift in Sources */,
 				76175A3126910B7200A4259B /* Publisher+Extensions.swift in Sources */,
+				7642FFFA26AB578200DB937F /* NewsScreen.swift in Sources */,
+				7642FFFE26AB610F00DB937F /* TextAlert.swift in Sources */,
 				76175A23269109D500A4259B /* HolidaysLoader.swift in Sources */,
 				76175A122690E3E100A4259B /* DashboardScreen.swift in Sources */,
+				7642FFF726AB4DF500DB937F /* AppSettings.swift in Sources */,
 				76175A1A2690EBBD00A4259B /* CountryBubbleView.swift in Sources */,
 				761759F42690C06000A4259B /* Router.swift in Sources */,
 				76175A2626910A3F00A4259B /* HolidaysResponse.swift in Sources */,
@@ -386,6 +438,7 @@
 				76175A3426914E3600A4259B /* ThirdScreen.swift in Sources */,
 				761759F62690C06000A4259B /* CountriesService.swift in Sources */,
 				76175A36269151BA00A4259B /* SearchBar.swift in Sources */,
+				769F870E26AB323E0030F85A /* CountryScreenModel.swift in Sources */,
 				76175A1E2690EE7200A4259B /* HolidaysScreen.swift in Sources */,
 				7613261126909D2A0023AD33 /* OTUS_IOSDP_1App.swift in Sources */,
 				76175A202690EF5200A4259B /* HolidaysModel.swift in Sources */,
@@ -654,6 +707,14 @@
 				minimumVersion = 3.1.0;
 			};
 		};
+		768F1CF926AC89DC00B0853E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +727,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 76175A0A2690CC7F00A4259B /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImageStore;
+		};
+		7642FFF426AB334500DB937F /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		768F1CFA26AC89DC00B0853E /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 768F1CF926AC89DC00B0853E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

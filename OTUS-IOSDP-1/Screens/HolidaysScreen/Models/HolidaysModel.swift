@@ -13,20 +13,22 @@ class HolidaysModel: ObservableObject {
 
     @Published private(set) var output = Output.success([])
 
-    @Input var country = ""
+    @Input var countryCode = ""
     @Input var year = Calendar.current.component(.year, from: Date())
     
     private let loader: HolidaysLoader
 
-    init(loader: HolidaysLoader = .init()) {
+    init(countryCode: String, loader: HolidaysLoader = .init()) {
+        self.countryCode = countryCode
         self.loader = loader
         configureDataPipeline()
+        self.countryCode = countryCode
     }
 }
 
 private extension HolidaysModel {
     func loadHolidays() {
-        loader.loadHolidays(forCountry: country, year: year)
+        loader.loadHolidays(forCountry: countryCode, year: year)
               .asResult()
               .receive(on: DispatchQueue.main)
               .assign(to: &$output)
@@ -35,14 +37,14 @@ private extension HolidaysModel {
 
 private extension HolidaysModel {
     func configureDataPipeline() {
-        $country
+        $countryCode
             .dropFirst()
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .removeDuplicates()
             .combineLatest($year)
             .map { [loader] query, filter in
                 loader.loadHolidays(
-                    forCountry: self.country,
+                    forCountry: self.countryCode,
                     year: self.year)
                 .asResult()
             }
