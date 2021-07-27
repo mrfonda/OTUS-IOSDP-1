@@ -10,7 +10,7 @@ import SwiftUI
 struct CountryScreen: View {
     @ObservedObject var model: CountryScreenModel
     @EnvironmentObject var router: Router
-    
+   
     @State private var isShowingAlert: Bool = false
     @State var selected: Int = 0
     var body: some View {
@@ -23,6 +23,7 @@ struct CountryScreen: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             
+                
             TabView(selection: $selected) {
                 ForEach(model.tabs) { tab in
                     switch tab.type {
@@ -32,10 +33,16 @@ struct CountryScreen: View {
                     case .holidays(let code):
                         HolidaysScreen(viewModel: HolidaysModel(countryCode: code))
                             .tag(tab.id)
+                    case .neighbours(let code):
+                        NeighboursView()
+                            .environmentObject(NeighbourCountriesService(countryCode: code))
+                            .tag(tab.id)
                     }
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            
+            
             
         }
         .alert(
@@ -61,6 +68,41 @@ struct CountryScreen: View {
             }))
         .onDisappear() {
             router.openedCountryCode = nil
+        }
+    }
+    
+    
+    struct NeighboursView: View {
+        @EnvironmentObject var neighborsService: NeighbourCountriesService
+        
+        var body: some View {
+            switch neighborsService.output {
+            case .success(let neighbours):
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.flexible(), spacing: 16)], alignment: .leading) {
+                        if neighbours.count > 0 {
+                            ForEach(neighbours) { neighbour in
+                                NavigationLink(destination: CountryScreen(model: CountryScreenModel(country: Country(
+                                                                                                        id: neighbour.countryCode,
+                                                                                                        name: neighbour.countryName,
+                                                                                                        imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))), router: EnvironmentObject<Router>())
+                                ) {
+                                    CountryThumbnailView(country: Country(
+                                                            id: neighbour.countryCode,
+                                                            name: neighbour.countryName,
+                                                            imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png")))
+                                }
+                                
+                            }
+                        } else {
+                            Text("No neighbouring countries")
+                        }
+                        
+                    }
+                }
+            case .failure(let error):
+                Text(error.localizedDescription)
+            }
         }
     }
 }

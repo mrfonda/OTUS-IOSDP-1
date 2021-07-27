@@ -7,17 +7,20 @@
 
 import SwiftUI
 import Combine
+import NavigationStack
 
 struct MainScreen: View {
     enum MainScreenTabs: Int, CaseIterable, Identifiable {
         case dashboard
         case countries
+        case neighbours
         case third
         
         var id: Int { rawValue }
     }
     
     @EnvironmentObject var router: Router
+    @EnvironmentObject var countriesService: CountriesService
     
     var body: some View {
         TabView(selection: $router.mainTabSelection) {
@@ -30,10 +33,23 @@ struct MainScreen: View {
 
                     }.tag(tab.rawValue)
                 case .countries:
-                    CountriesScreen().tabItem {
+                    NavigationView {
+                        CountriesScreen()
+                        Text("Select a country")
+                    }
+                    .tabItem {
                         Image(systemName: "globe")
                         Text("Countries")
-                    }.tag(tab.rawValue)
+                    }
+                    .tag(tab.rawValue)
+                case .neighbours:
+                    NeighboursScreen(neighborsService: NeighbourCountriesService(countryCode: "RU"))
+                        .environmentObject(NavigationStack())
+                    .tabItem {
+                        Image(systemName: "globe")
+                        Text("Neighbours")
+                    }
+                    .tag(tab.rawValue)
                 case .third:
                     ThirdScreen().tabItem {
                         Image(systemName: "gift")

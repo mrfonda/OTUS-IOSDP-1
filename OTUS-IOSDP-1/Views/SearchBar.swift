@@ -13,11 +13,15 @@ import Combine
 
 
 struct SearchView: UIViewRepresentable {
-
+    @Binding var searchText: String
+    
     final class Coordinator: NSObject, UISearchControllerDelegate {
+        var searchText: Binding<String>
+        
         var controller : UISearchController
         
-        init(searchController: UISearchController) {
+        init(searchController: UISearchController, searchText: Binding<String>) {
+            self.searchText = searchText
             controller = searchController
             super.init()
         }
@@ -37,25 +41,29 @@ struct SearchView: UIViewRepresentable {
         func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             resign()
         }
+        
+        @objc func textFieldDidChange(_ tf: UITextField) {
+            searchText.wrappedValue = tf.text ?? ""
+        }
     }
 
     
     func makeCoordinator() -> Coordinator {
         let controller = UISearchController()
-        let coordinator = Coordinator(searchController: controller)
+        let coordinator = Coordinator(searchController: controller, searchText: $searchText)
         controller.delegate = coordinator
         return coordinator
     }
     
-    @ObservedObject var searchModel: CountriesService
-    
     func makeUIView(context: UIViewRepresentableContext<SearchView>) -> UISearchBar {
 
-        context.coordinator.controller.searchBar.searchTextField.addTarget(searchModel, action: #selector(searchModel.textFieldDidChange), for: .editingChanged)
-
+        context.coordinator.controller.searchBar.searchTextField.addTarget(context.coordinator, action: #selector(Coordinator.textFieldDidChange), for: .editingChanged)
+        
         return context.coordinator.controller.searchBar
     }
 
+
+    
     func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchView>) {
         if uiView.text == nil || uiView.text?.isEmpty == true {
             context.coordinator.resign()

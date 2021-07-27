@@ -40,8 +40,12 @@
 		7642FFFE26AB610F00DB937F /* TextAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFFD26AB610F00DB937F /* TextAlert.swift */; };
 		7649104126AB6DC60087784B /* RandomAccessCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649104026AB6DC60087784B /* RandomAccessCollection.swift */; };
 		768F1CFB26AC89DC00B0853E /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 768F1CFA26AC89DC00B0853E /* NavigationStack */; };
+		768F1CFE26AF29BE00B0853E /* NeighbourCountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1CFD26AF29BD00B0853E /* NeighbourCountriesService.swift */; };
+		768F1D0026AF2A8B00B0853E /* NeighboursLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1CFF26AF2A8B00B0853E /* NeighboursLoader.swift */; };
+		768F1D0326AF53FE00B0853E /* NeighboursScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1D0226AF53FE00B0853E /* NeighboursScreen.swift */; };
 		769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F86EF26AB234D0030F85A /* CountryScreen.swift */; };
 		769F870E26AB323E0030F85A /* CountryScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F870D26AB323E0030F85A /* CountryScreenModel.swift */; };
+		76A2457B26B0039800E076BD /* BackToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A2457A26B0039800E076BD /* BackToView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +91,13 @@
 		7642FFFB26AB57C600DB937F /* NewsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenModel.swift; sourceTree = "<group>"; };
 		7642FFFD26AB610F00DB937F /* TextAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlert.swift; sourceTree = "<group>"; };
 		7649104026AB6DC60087784B /* RandomAccessCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollection.swift; sourceTree = "<group>"; };
+		768F1CFD26AF29BD00B0853E /* NeighbourCountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighbourCountriesService.swift; sourceTree = "<group>"; };
+		768F1CFF26AF2A8B00B0853E /* NeighboursLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighboursLoader.swift; sourceTree = "<group>"; };
+		768F1D0226AF53FE00B0853E /* NeighboursScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighboursScreen.swift; sourceTree = "<group>"; };
 		769F86EF26AB234D0030F85A /* CountryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreen.swift; sourceTree = "<group>"; };
 		769F870C26AB31290030F85A /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Networking; path = Modules/Networking; sourceTree = "<group>"; };
 		769F870D26AB323E0030F85A /* CountryScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreenModel.swift; sourceTree = "<group>"; };
+		76A2457A26B0039800E076BD /* BackToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 		761759F02690C06000A4259B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				768F1D0126AF53E600B0853E /* NeighboursScreen */,
 				769F86EE26AB23360030F85A /* CountryScreen */,
 				761759F32690C06000A4259B /* MainScreen.swift */,
 				76175A102690E18100A4259B /* DashboardScreen */,
@@ -216,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				76175A172690EB3B00A4259B /* CardModifier.swift */,
+				76A2457A26B0039800E076BD /* BackToView.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -245,6 +255,7 @@
 		76175A212691098E00A4259B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				768F1CFC26AF28C200B0853E /* Networking */,
 				76175A2E26910B5500A4259B /* Extensions */,
 				76175A2926910A9A00A4259B /* InputPropertyWrapper.swift */,
 				76175A2C26910AC200A4259B /* DateFormatters.swift */,
@@ -295,6 +306,23 @@
 				7642FFFB26AB57C600DB937F /* NewsScreenModel.swift */,
 			);
 			path = NewsScreen;
+			sourceTree = "<group>";
+		};
+		768F1CFC26AF28C200B0853E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				768F1CFF26AF2A8B00B0853E /* NeighboursLoader.swift */,
+				768F1CFD26AF29BD00B0853E /* NeighbourCountriesService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		768F1D0126AF53E600B0853E /* NeighboursScreen */ = {
+			isa = PBXGroup;
+			children = (
+				768F1D0226AF53FE00B0853E /* NeighboursScreen.swift */,
+			);
+			path = NeighboursScreen;
 			sourceTree = "<group>";
 		};
 		769F86EE26AB23360030F85A /* CountryScreen */ = {
@@ -419,7 +447,9 @@
 				761759F72690C06000A4259B /* MainScreen.swift in Sources */,
 				769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */,
 				7642FFFC26AB57C600DB937F /* NewsScreenModel.swift in Sources */,
+				768F1D0026AF2A8B00B0853E /* NeighboursLoader.swift in Sources */,
 				7649104126AB6DC60087784B /* RandomAccessCollection.swift in Sources */,
+				768F1CFE26AF29BE00B0853E /* NeighbourCountriesService.swift in Sources */,
 				76175A152690E4A900A4259B /* CountryThumbnailView.swift in Sources */,
 				76175A2A26910A9A00A4259B /* InputPropertyWrapper.swift in Sources */,
 				76175A2826910A6400A4259B /* Holiday.swift in Sources */,
@@ -440,8 +470,10 @@
 				76175A36269151BA00A4259B /* SearchBar.swift in Sources */,
 				769F870E26AB323E0030F85A /* CountryScreenModel.swift in Sources */,
 				76175A1E2690EE7200A4259B /* HolidaysScreen.swift in Sources */,
+				76A2457B26B0039800E076BD /* BackToView.swift in Sources */,
 				7613261126909D2A0023AD33 /* OTUS_IOSDP_1App.swift in Sources */,
 				76175A202690EF5200A4259B /* HolidaysModel.swift in Sources */,
+				768F1D0326AF53FE00B0853E /* NeighboursScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

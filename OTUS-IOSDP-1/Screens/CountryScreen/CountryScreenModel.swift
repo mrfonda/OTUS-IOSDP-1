@@ -19,6 +19,7 @@ final class CountryScreenModel: ObservableObject {
         
         enum `Type` {
             case holidays(code: String)
+            case neighbours(code: String)
             case news(searchQuery: String)
         }
     }
@@ -33,12 +34,15 @@ final class CountryScreenModel: ObservableObject {
     
     init(country: Country) {
         self.country = country
-        tabs = [Tab(id: 0, title: "holidays.no.paging", type: .holidays(code: country.id))]
+        tabs = [
+            Tab(id: 0, title: "holidays", type: .holidays(code: country.id)),
+            Tab(id: 1, title: "neighbours", type: .neighbours(code: country.id))
+        ]
         
         tabs.append(
             contentsOf: [
-                makeNewsTab(forTitle: "weather", id: 1),
-                makeNewsTab(forTitle: "economy", id: 2)])
+                makeNewsTab(forTitle: "weather", id: 2),
+                makeNewsTab(forTitle: "economy", id: 3)])
     }
     
     private func makeNewsTab(forTitle title: String, id: Int) -> Tab {

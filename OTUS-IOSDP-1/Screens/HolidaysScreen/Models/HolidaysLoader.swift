@@ -11,7 +11,7 @@ import Combine
 struct HolidaysLoader {
     private let urlSession = URLSession.shared
     private let urlString: String = "https://calendarific.com/api/v2/holidays"
-    private let apiKey: String = "551995c63a567cacbbffa61f76ec8b440b9ecaa1758b5b0bb8fed4f614b58209"
+    private let apiKey: String = "795f8ae2b5a189b4a0099ad23cde03c9d18e1732"
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
     

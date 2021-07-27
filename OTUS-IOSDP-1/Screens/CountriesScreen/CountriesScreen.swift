@@ -24,42 +24,45 @@ struct CountriesScreen: View {
     
     var body: some View {
         ScrollViewReader { proxy in
-            NavigationView {
-                VStack {
-                    SearchView(searchModel: countriesService)
-                    List(countriesService.filtered) { country in
-                        CountryThumbnailView(country: country)
-                            .frame(height: 48)
-                            .onTapGesture {
-                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                                router.openedCountryCode = country.id
-                                openedCountry = country.id
-                            }
-                            .background(NavigationLink(destination: countryScreen(country: country), tag: country.id, selection: $openedCountry) { EmptyView() })
-                            
-                    }
-                    .onReceive(Just(router.openedCountryCode).delay(for: 0, scheduler: DispatchQueue.main)) {
-                        if let code = $0, openedCountry != code {
-                            countriesService.searchText = ""
-                            withAnimation() {
-                                proxy.scrollTo(code)
-                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                                    openedCountry = router.openedCountryCode
+            
+            VStack {
+                SearchView(searchText: $countriesService.searchText)
+                List(countriesService.filtered) { country in
+                    NavigationLink(
+                        destination: countryScreen(country: country),
+                        tag: country.id, selection: $openedCountry, label: {
+                            CountryThumbnailView(country: country)
+                                .frame(height: 48)
+                                .onTapGesture {
+                                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                    router.openedCountryCode = country.id
+                                    openedCountry = country.id
                                 }
+                        })
+                    
+                    
+                }
+                .onReceive(Just(router.openedCountryCode).delay(for: 0, scheduler: DispatchQueue.main)) {
+                    if let code = $0, openedCountry != code {
+                        //                            countriesService.searchText = ""
+                        withAnimation() {
+                            proxy.scrollTo(code)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                                openedCountry = router.openedCountryCode
                             }
                         }
-                        
-                        if $0 == nil {
-                            openedCountry = nil
-                        }
                     }
-                    .listStyle(PlainListStyle())
-                    .onAppear() {
-                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    
+                    if $0 == nil {
+                        openedCountry = nil
                     }
                 }
-                .navigationBarTitle("Explore holidays in...")
+                .listStyle(PlainListStyle())
+                .onAppear() {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                }
             }
+            .navigationBarTitle("Explore holidays in...")
         }
     }
 }
