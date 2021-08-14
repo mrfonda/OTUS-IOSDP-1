@@ -4,6 +4,7 @@
 //
 //  Created by Vladislav Dorfman on 27/07/2021.
 //
+#if !os(macOS)
 
 import SwiftUI
 
@@ -21,3 +22,5 @@ struct BackToView: ViewModifier {
         })
     }
 }
+
+#endif

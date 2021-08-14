@@ -8,10 +8,22 @@
 import Foundation
 import Combine
 
-struct HolidaysLoader {
+public protocol HolidaysLoader {
+    func loadHolidays(
+        forCountry country: String,
+        year: Int
+    ) -> AnyPublisher<[Holiday], Error>
+}
+
+public struct CalendarificHolidaysLoader: HolidaysLoader {
     private let urlSession = URLSession.shared
     private let urlString: String = "https://calendarific.com/api/v2/holidays"
-    private let apiKey: String = "795f8ae2b5a189b4a0099ad23cde03c9d18e1732"
+    public let apiKey: String
+    
+    public init(apiKey: String) {
+        self.apiKey = apiKey
+    }
+    
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
     
@@ -25,7 +37,7 @@ struct HolidaysLoader {
         return decoder
     }()
     
-    func loadHolidays(
+    public func loadHolidays(
         forCountry country: String,
         year: Int
     ) -> AnyPublisher<[Holiday], Error> {

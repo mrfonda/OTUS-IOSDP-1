@@ -7,9 +7,10 @@
 
 import SwiftUI
 import NavigationStack
+import UIComponents
 
 struct NeighboursScreen: View {
-    @ObservedObject var neighborsService: NeighbourCountriesService
+    @ObservedObject var neighborsService: NeighboursScreenViewModel
     @EnvironmentObject var navigationStack: NavigationStack
     
     var body: some View {
@@ -29,33 +30,18 @@ struct NeighboursScreen: View {
                                                 PopView {
                                                     Text("<")
                                                     NeighboursScreen(
-                                                neighborsService: NeighbourCountriesService(
+                                                neighborsService: NeighboursScreenViewModel(
                                                     countryCode: neighbour.countryCode))
                                                 }
                                             }) {
                                         
-                                            CountryThumbnailView(country: Country(
-                                                                    id: neighbour.countryCode,
-                                                                    name: neighbour.countryName,
-                                                                    imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png")))
+                                        CountryThumbnailView(
+                                            id: neighbour.countryCode,
+                                            name: neighbour.countryName,
+                                            imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))
                                         
                                         
                                     }
-                                    
-                                    //                                NavigationLink(destination: CountryScreen(model: CountryScreenModel(country: Country(
-                                    //                                                                                                        id: neighbour.countryCode,
-    //                                                                                                        name: neighbour.countryName,
-    //                                                                                                        imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))), router: EnvironmentObject<Router>())
-    //                                ) {
-    //                                    CountryThumbnailView(country: Country(
-    //                                                            id: neighbour.countryCode,
-    //                                                            name: neighbour.countryName,
-    //                                                            imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png")))
-    //                                        .onTapGesture {
-    //                                            <#code#>
-    //                                        }
-    //                                }
-                                    
                                 }
                             } else {
                                 Text("No neighbouring countries")

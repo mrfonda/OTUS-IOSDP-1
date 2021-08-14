@@ -4,6 +4,8 @@
 //
 //  Created by Vladislav Dorfman on 03/07/2021.
 //
+#if !os(macOS)
+
 
 import SwiftUI
 
@@ -25,3 +27,5 @@ struct CardModifier: ViewModifier {
                         trailing: 8))
     }
 }
+
+#endif

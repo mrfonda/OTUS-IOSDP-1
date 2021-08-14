@@ -1,5 +1,5 @@
 //
-//  NewsScreenModel.swift
+//  NewsScreenViewModel.swift
 //  OTUS-IOSDP-1
 //
 //  Created by Vladislav Dorfman on 23/07/2021.
@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-final class NewsScreenModel: ObservableObject {
+final class NewsScreenViewModel: ObservableObject {
     private let queryString: String
     private var noMoreResilts: Bool = false
     private var date: String {
@@ -22,7 +22,7 @@ final class NewsScreenModel: ObservableObject {
             }) ?? ""
     }
     
-    private let queue: DispatchQueue = .init(label: "\(NewsScreenModel.self)")
+    private let queue: DispatchQueue = .init(label: "\(NewsScreenViewModel.self)")
     
     var page: Int = 1
     

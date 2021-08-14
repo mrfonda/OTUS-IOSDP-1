@@ -19,7 +19,6 @@ struct HolidaysResponse: Codable {
         case response
     }
     
-    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: ResponseCodingKeys.self)
            

@@ -46,8 +46,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "loadHolidays(forCountry:year:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "loadHolidays(forCountry:year:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "configureDataPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "configureDataPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "configureDataPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "configureDataPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "loadHolidays(forCountry:year:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "OTUS-IOSDP-1/Screens/CountriesScreen/CountriesService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "searchText"
             landmarkType = "24">
          </BreakpointContent>
@@ -382,8 +382,8 @@
             filePath = "OTUS-IOSDP-1/Screens/CountryScreen/CountryScreenModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "addNewsTab(withTitle:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,8 +398,8 @@
             filePath = "OTUS-IOSDP-1/Screens/CountryScreen/CountryScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -446,9 +446,9 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "init(countryCode:loader:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "init(countryCode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -462,8 +462,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "configureDataPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "loadHolidays(forCountry:year:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -494,8 +494,8 @@
             filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -510,8 +510,8 @@
             filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -526,8 +526,8 @@
             filePath = "OTUS-IOSDP-1/Screens/ThirdScreen/ThirdScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -638,9 +638,249 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/Models/HolidaysLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "loadHolidays(forCountry:year:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA367029-1EEF-41FF-BB28-1263659559B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Helpers/Networking/NeighbourCountriesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "NeighbourCountriesService"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC2B2797-9945-4E77-8712-638F03B7FBC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Helpers/Networking/NeighbourCountriesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "configureDataPipeline()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5198A9A8-04F3-4C53-8F25-BC6D11D43A57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Screens/NeighboursScreen/NeighboursScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9F0EC25-F8AA-4B49-93A4-4F4F2F556926"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/App/OTUS_IOSDP_1App.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEA62B09-06D9-4821-BBF4-A969831DB113"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/ServiceLocator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "addService(service:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5286E852-9316-4DC4-BE64-D3795DA1D31E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/Injected.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "wrappedValue"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63A966C5-2C5C-4C5A-88D1-36A00D6F3ABB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/UIComponents/Sources/UIComponents/Views/CountryBubbleView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41B6CEE2-D805-4B75-BC1E-EB2EC650DB41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "loadNeigbours(forCountry:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43438F87-1CB2-4091-A40D-20809AA64482"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "loadNeigbours(forCountry:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "43438F87-1CB2-4091-A40D-20809AA64482 - 7937194eb62605a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
+                  moduleName = "OTUS-IOSDP-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "2234">
+               </Location>
+               <Location
+                  uuid = "43438F87-1CB2-4091-A40D-20809AA64482 - b3916d819e9f5122"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; Foundation.Data in Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
+                  moduleName = "OTUS-IOSDP-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "79">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDC54DC5-85BC-4D42-95FE-7D43AA670BCC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "loadNeigbours(forCountry:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BDC54DC5-85BC-4D42-95FE-7D43AA670BCC - 7937194eb626005"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
+                  moduleName = "OTUS-IOSDP-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2242">
+               </Location>
+               <Location
+                  uuid = "BDC54DC5-85BC-4D42-95FE-7D43AA670BCC - af54a2defb2e65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Core.NeighbourCountry&gt;) -&gt; Swift.Array&lt;Core.NeighbourCountry&gt; in Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
+                  moduleName = "OTUS-IOSDP-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1001AECB-3AB2-43E7-8791-E254952F890A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "loadNeigbours(forCountry:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

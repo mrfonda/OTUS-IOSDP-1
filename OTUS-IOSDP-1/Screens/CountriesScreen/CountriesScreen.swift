@@ -7,16 +7,16 @@
 
 import SwiftUI
 import Combine
-import URLImage
+import UIComponents
 
 struct CountriesScreen: View {
-    @EnvironmentObject var countriesService: CountriesService
+    @EnvironmentObject var countriesService: CountriesScreenViewModel
     @EnvironmentObject var router: Router
-    @EnvironmentObject var holidaysViewModel: HolidaysModel
+    
     @State var openedCountry: String? = nil
     
     func countryScreen(country: Country) -> some View {
-        return CountryScreen(model: CountryScreenModel(country: country))
+        return CountryScreen(model: CountryScreenViewModel(country: country))
             .onAppear() {
                 router.lastCountry = country
             }
@@ -26,12 +26,12 @@ struct CountriesScreen: View {
         ScrollViewReader { proxy in
             
             VStack {
-                SearchView(searchText: $countriesService.searchText)
+                SearchView($countriesService.searchText)
                 List(countriesService.filtered) { country in
                     NavigationLink(
                         destination: countryScreen(country: country),
                         tag: country.id, selection: $openedCountry, label: {
-                            CountryThumbnailView(country: country)
+                            CountryThumbnailView(id: country.id, name: country.name, imageURL: country.imageURL)
                                 .frame(height: 48)
                                 .onTapGesture {
                                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

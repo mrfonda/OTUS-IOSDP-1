@@ -10,7 +10,7 @@ import URLImage
 
 struct HolidaysScreen: View {
 
-    @ObservedObject var viewModel: HolidaysModel
+    @ObservedObject var viewModel: HolidaysScreenViewModel
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {

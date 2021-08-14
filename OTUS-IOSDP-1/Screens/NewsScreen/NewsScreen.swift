@@ -15,7 +15,7 @@ extension Article: Identifiable {
 }
 
 struct NewsScreen: View {
-    @ObservedObject var model: NewsScreenModel
+    @ObservedObject var model: NewsScreenViewModel
     
     var body: some View {
         List(model.items) { article in

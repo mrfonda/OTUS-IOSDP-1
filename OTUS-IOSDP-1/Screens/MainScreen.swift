@@ -13,14 +13,14 @@ struct MainScreen: View {
     enum MainScreenTabs: Int, CaseIterable, Identifiable {
         case dashboard
         case countries
-        case neighbours
+//        case neighbours //the api is down
         case third
         
         var id: Int { rawValue }
     }
     
     @EnvironmentObject var router: Router
-    @EnvironmentObject var countriesService: CountriesService
+    @EnvironmentObject var countriesService: CountriesScreenViewModel
     
     var body: some View {
         TabView(selection: $router.mainTabSelection) {
@@ -42,14 +42,14 @@ struct MainScreen: View {
                         Text("Countries")
                     }
                     .tag(tab.rawValue)
-                case .neighbours:
-                    NeighboursScreen(neighborsService: NeighbourCountriesService(countryCode: "RU"))
-                        .environmentObject(NavigationStack())
-                    .tabItem {
-                        Image(systemName: "globe")
-                        Text("Neighbours")
-                    }
-                    .tag(tab.rawValue)
+//                case .neighbours:
+//                    NeighboursScreen(neighborsService: NeighboursScreenViewModel(countryCode: "RU"))
+//                        .environmentObject(NavigationStack())
+//                    .tabItem {
+//                        Image(systemName: "globe")
+//                        Text("Neighbours")
+//                    }
+//                    .tag(tab.rawValue)
                 case .third:
                     ThirdScreen().tabItem {
                         Image(systemName: "gift")
@@ -57,6 +57,9 @@ struct MainScreen: View {
                     }.tag(tab.rawValue)
                 }
             }
+        }
+        .onAppear() {
+            countriesService.loadCountries()
         }
     }
 }

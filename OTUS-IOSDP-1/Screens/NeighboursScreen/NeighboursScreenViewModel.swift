@@ -1,5 +1,5 @@
 //
-//  NeighbourCountriesService.swift
+//  NeighboursScreenViewModel.swift
 //  OTUS-IOSDP-1
 //
 //  Created by Vladislav Dorfman on 26/07/2021.
@@ -7,33 +7,18 @@
 
 import Foundation
 import Combine
+import Core
 
-// MARK: - NeighbourElement
-struct NeighbourCountry: Codable, Identifiable {
-    let countryCode, countryName: String
-
-    var id: String {
-        countryCode
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case countryCode = "country_code"
-        case countryName = "country_name"
-    }
-}
-
-typealias NeighbourCountries = [NeighbourCountry]
-
-final class NeighbourCountriesService: ObservableObject {
+final class NeighboursScreenViewModel: ObservableObject {
     typealias Output = Result<NeighbourCountries, Error>
 
     @Published private(set) var output = Output.success([])
 
     @Input var countryCode = ""
    
-    private let loader: NeighbourCountriesLoader
+    @Injected var loader: NeighbourCountriesLoader!
 
-    init(countryCode: String, loader: NeighbourCountriesLoader = .init()) {
+    init(countryCode: String) {
         self.countryCode = countryCode
         self.loader = loader
         configureDataPipeline()
@@ -42,14 +27,14 @@ final class NeighbourCountriesService: ObservableObject {
 }
 
 
-private extension NeighbourCountriesService {
+private extension NeighboursScreenViewModel {
     func configureDataPipeline() {
         $countryCode
             .dropFirst()
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .removeDuplicates()
-            .map { [loader] query in
-                loader.loadNeigbours(forCountry: self.countryCode)
+            .compactMap { [loader] query in
+                loader?.loadNeigbours(forCountry: self.countryCode)
                 .asResult()
             }
             .switchToLatest()

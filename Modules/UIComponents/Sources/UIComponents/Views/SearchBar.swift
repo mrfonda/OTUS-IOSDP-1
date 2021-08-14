@@ -4,18 +4,21 @@
 //
 //  Created by Vladislav Dorfman on 04/07/2021.
 //
-
-import Foundation
+#if !os(macOS)
 
 import SwiftUI
 import UIKit
 import Combine
 
 
-struct SearchView: UIViewRepresentable {
-    @Binding var searchText: String
+public struct SearchView: UIViewRepresentable {
+    public var searchText: Binding<String>
     
-    final class Coordinator: NSObject, UISearchControllerDelegate {
+    public init(_ searchText: Binding<String>) {
+        self.searchText = searchText
+    }
+    
+    public final class Coordinator: NSObject, UISearchControllerDelegate {
         var searchText: Binding<String>
         
         var controller : UISearchController
@@ -48,14 +51,14 @@ struct SearchView: UIViewRepresentable {
     }
 
     
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         let controller = UISearchController()
-        let coordinator = Coordinator(searchController: controller, searchText: $searchText)
+        let coordinator = Coordinator(searchController: controller, searchText: searchText)
         controller.delegate = coordinator
         return coordinator
     }
     
-    func makeUIView(context: UIViewRepresentableContext<SearchView>) -> UISearchBar {
+    public func makeUIView(context: UIViewRepresentableContext<SearchView>) -> UISearchBar {
 
         context.coordinator.controller.searchBar.searchTextField.addTarget(context.coordinator, action: #selector(Coordinator.textFieldDidChange), for: .editingChanged)
         
@@ -64,13 +67,14 @@ struct SearchView: UIViewRepresentable {
 
 
     
-    func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchView>) {
+    public func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchView>) {
         if uiView.text == nil || uiView.text?.isEmpty == true {
             context.coordinator.resign()
         }
     }
     
-    typealias UIViewType = UISearchBar
-
-
+    public typealias UIViewType = UISearchBar
 }
+
+
+#endif

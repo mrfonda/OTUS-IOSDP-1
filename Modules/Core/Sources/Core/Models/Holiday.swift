@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Holiday: Codable, Identifiable {
-    var id: String { name }
-    let name: String
-    let description: String
-    let date: Date
-    let type: [String]
-    let locations: String
+public struct Holiday: Codable, Identifiable {
+    public var id: String { name }
+    public let name: String
+    public let description: String
+    public let date: Date
+    public let type: [String]
+    public let locations: String
     
     enum CodingKeys: String, CodingKey {
         case name, description, date, type, locations
@@ -23,7 +23,7 @@ struct Holiday: Codable, Identifiable {
         case iso
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
            
         

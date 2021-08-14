@@ -1,3 +1,1 @@
-# Networking
-
-A description of this package.
+# News API Networking (code generated)

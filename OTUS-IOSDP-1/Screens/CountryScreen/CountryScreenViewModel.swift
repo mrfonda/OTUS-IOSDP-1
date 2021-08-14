@@ -1,5 +1,5 @@
 //
-//  CountryScreenModel.swift
+//  CountryScreenViewModel.swift
 //  OTUS-IOSDP-1
 //
 //  Created by Vladislav Dorfman on 23/07/2021.
@@ -9,9 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-
-
-final class CountryScreenModel: ObservableObject {
+final class CountryScreenViewModel: ObservableObject {
     struct Tab: Identifiable {
         let id: Int
         let title: String
@@ -36,11 +34,12 @@ final class CountryScreenModel: ObservableObject {
         self.country = country
         tabs = [
             Tab(id: 0, title: "holidays", type: .holidays(code: country.id)),
-            Tab(id: 1, title: "neighbours", type: .neighbours(code: country.id))
+//            Tab(id: 1, title: "neighbours", type: .neighbours(code: country.id)) // api is down
         ]
         
         tabs.append(
             contentsOf: [
+                makeNewsTab(forTitle: "politics", id: 1),
                 makeNewsTab(forTitle: "weather", id: 2),
                 makeNewsTab(forTitle: "economy", id: 3)])
     }

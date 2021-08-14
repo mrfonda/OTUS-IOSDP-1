@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct DashboardScreen: View {
     @EnvironmentObject var router: Router
-    @EnvironmentObject var countriesService: CountriesService
+    @EnvironmentObject var countriesService: CountriesScreenViewModel
     
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
@@ -22,7 +23,7 @@ struct DashboardScreen: View {
                 
                 VStack(alignment: .center, spacing: 16) {
                     Text("Last seen country:")
-                    CountryBubbleView(country: lastCountry)
+                    CountryBubbleView(id: lastCountry.id, name: lastCountry.name, imageURL: lastCountry.imageURL)
                         .onTapGesture {
                             
                             withAnimation {
@@ -37,7 +38,7 @@ struct DashboardScreen: View {
             if let randomCountry = countriesService.randomCountry {
                 VStack(alignment: .center, spacing: 16) {
                     Text("Random country:")
-                    CountryBubbleView(country: randomCountry)
+                    CountryBubbleView(id: randomCountry.id, name: randomCountry.name, imageURL: randomCountry.imageURL)
                         .onTapGesture {
                             
                             

@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct ThirdScreen: View {
     @State private var isShowing = false
     @EnvironmentObject var router: Router
-    @EnvironmentObject var countriesService: CountriesService
+    @EnvironmentObject var countriesService: CountriesScreenViewModel
     
     var body: some View {
 
@@ -21,7 +22,9 @@ struct ThirdScreen: View {
                 }.fullScreenCover(isPresented: $isShowing) {
                     if let randomCountry = countriesService.randomCountry {
                         Text("Random country:")
-                        CountryBubbleView(country: randomCountry)
+                        CountryBubbleView(id: randomCountry.id,
+                                            name: randomCountry.name,
+                                            imageURL: randomCountry.imageURL)
                             .onTapGesture {
                                 isShowing.toggle()
                                 router.openedCountryCode =  randomCountry.id

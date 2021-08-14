@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct CountryScreen: View {
-    @ObservedObject var model: CountryScreenModel
+    @ObservedObject var model: CountryScreenViewModel
     @EnvironmentObject var router: Router
    
     @State private var isShowingAlert: Bool = false
@@ -28,14 +29,14 @@ struct CountryScreen: View {
                 ForEach(model.tabs) { tab in
                     switch tab.type {
                     case .news(let searchQuery):
-                        NewsScreen(model: NewsScreenModel(queryString: searchQuery))
+                        NewsScreen(model: NewsScreenViewModel(queryString: searchQuery))
                             .tag(tab.id)
                     case .holidays(let code):
-                        HolidaysScreen(viewModel: HolidaysModel(countryCode: code))
+                        HolidaysScreen(viewModel: HolidaysScreenViewModel(countryCode: code))
                             .tag(tab.id)
                     case .neighbours(let code):
                         NeighboursView()
-                            .environmentObject(NeighbourCountriesService(countryCode: code))
+                            .environmentObject(NeighboursScreenViewModel(countryCode: code))
                             .tag(tab.id)
                     }
                 }
@@ -55,7 +56,10 @@ struct CountryScreen: View {
             }))
         .toolbar {
             ToolbarItem(placement: .principal) {
-                CountryThumbnailView(country: model.country)
+                CountryThumbnailView(
+                    id: model.country.id,
+                    name: model.country.name,
+                    imageURL: model.country.imageURL)
             }
         }
         .navigationTitle(model.country.name)
@@ -73,7 +77,7 @@ struct CountryScreen: View {
     
     
     struct NeighboursView: View {
-        @EnvironmentObject var neighborsService: NeighbourCountriesService
+        @EnvironmentObject var neighborsService: NeighboursScreenViewModel
         
         var body: some View {
             switch neighborsService.output {
@@ -82,15 +86,17 @@ struct CountryScreen: View {
                     LazyVGrid(columns: [GridItem(.flexible(), spacing: 16)], alignment: .leading) {
                         if neighbours.count > 0 {
                             ForEach(neighbours) { neighbour in
-                                NavigationLink(destination: CountryScreen(model: CountryScreenModel(country: Country(
-                                                                                                        id: neighbour.countryCode,
-                                                                                                        name: neighbour.countryName,
-                                                                                                        imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))), router: EnvironmentObject<Router>())
+                                NavigationLink(
+                                    destination: CountryScreen(
+                                        model: CountryScreenViewModel(
+                                            country: Country(
+                                                id: neighbour.countryCode,
+                                                name: neighbour.countryName,
+                                                imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))), router: EnvironmentObject<Router>())
                                 ) {
-                                    CountryThumbnailView(country: Country(
-                                                            id: neighbour.countryCode,
-                                                            name: neighbour.countryName,
-                                                            imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png")))
+                                    CountryThumbnailView(id: neighbour.countryCode,
+                                                         name: neighbour.countryName,
+                                                         imageURL: URL(string: "https://www.countryflags.io/\(neighbour.countryCode)/flat/64.png"))
                                 }
                                 
                             }
@@ -106,12 +112,3 @@ struct CountryScreen: View {
         }
     }
 }
-
-//struct CountryScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationView {
-//        CountryScreen()
-//            .environmentObject(CountryScreenModel())
-//        }
-//    }
-//}
