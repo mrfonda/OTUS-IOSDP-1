@@ -5,10 +5,12 @@
 //  Created by Vladislav Dorfman on 23/07/2021.
 //
 
+#if !os(macOS)
+
 import SwiftUI
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     convenience init(alert: TextAlert) {
         self.init(title: alert.title, message: nil, preferredStyle: .alert)
         addTextField { $0.placeholder = alert.placeholder }
@@ -24,28 +26,28 @@ extension UIAlertController {
 
 
 
-struct AlertWrapper<Content: View>: UIViewControllerRepresentable {
+public struct AlertWrapper<Content: View>: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
     let alert: TextAlert
     let content: Content
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<AlertWrapper>) -> UIHostingController<Content> {
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<AlertWrapper>) -> UIHostingController<Content> {
         UIHostingController(rootView: content)
     }
     
-    final class Coordinator {
+    public final class Coordinator {
         var alertController: UIAlertController?
         init(_ controller: UIAlertController? = nil) {
             self.alertController = controller
         }
     }
     
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         return Coordinator()
     }
     
     
-    func updateUIViewController(_ uiViewController: UIHostingController<Content>, context: UIViewControllerRepresentableContext<AlertWrapper>) {
+    public func updateUIViewController(_ uiViewController: UIHostingController<Content>, context: UIViewControllerRepresentableContext<AlertWrapper>) {
         uiViewController.rootView = content
         if isPresented && uiViewController.presentedViewController == nil {
             var alert = self.alert
@@ -67,11 +69,18 @@ public struct TextAlert {
     public var placeholder: String = ""
     public var accept: String = "OK"
     public var cancel: String = "Cancel"
-    public var action: (String?) -> ()
+    public var action: (String?) -> Void
+    
+    public init(title: String, action: @escaping (String?) -> Void) {
+        self.title = title
+        self.action = action
+    }
 }
 
-extension View {
-    public func alert(isPresented: Binding<Bool>, _ alert: TextAlert) -> some View {
+public extension View {
+    func alert(isPresented: Binding<Bool>, _ alert: TextAlert) -> some View {
         AlertWrapper(isPresented: isPresented, alert: alert, content: self)
     }
 }
+
+#endif

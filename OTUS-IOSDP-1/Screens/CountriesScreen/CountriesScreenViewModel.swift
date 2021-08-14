@@ -1,5 +1,5 @@
 //
-//  CountriesService.swift
+//  CountriesScreenViewModel.swift
 //  OTUS-IOSDP-1
 //
 //  Created by Vladislav Dorfman on 03/07/2021.
@@ -8,18 +8,15 @@
 import Combine
 import Foundation
 import UIKit
+import Core
 
-struct Country: Identifiable {
-    let id: String
-    let name: String
-    let imageURL: URL?
-}
-
-class CountriesService: ObservableObject {
+class CountriesScreenViewModel: ObservableObject {
     
     @Published var countries: [Country] = []
     
     @Published var filtered: [Country] = []
+    
+    @Injected var loader: CountriesLoader!
     
     var searchText: String = "" {
         didSet {
@@ -47,18 +44,10 @@ class CountriesService: ObservableObject {
         }
     }
     
-    init () {
-        Locale.isoRegionCodes.forEach { code in
-            let name = Locale.current.localizedString(forRegionCode: code)
-            let imageURLString = "https://www.countryflags.io/\(code)/flat/64.png"
-            
-            let country = Country(
-                id: code,
-                name: name ?? code,
-                imageURL: URL(string: imageURLString))
-            
-            countries.append(country)
+    func loadCountries() {
+        loader.loadCountries { [weak self] countries in
+            self?.countries = countries.map{Country(coreCountry: $0)}
+            self?.filtered = self?.countries ?? .init()
         }
-        filtered = countries
     }
 }
