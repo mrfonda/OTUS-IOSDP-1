@@ -9,22 +9,26 @@ import SwiftUI
 import Combine
 import NavigationStack
 
-struct MainScreen: View {
-    enum MainScreenTabs: Int, CaseIterable, Identifiable {
-        case dashboard
-        case countries
-//        case neighbours //the api is down
-        case third
-        
-        var id: Int { rawValue }
-    }
+enum MainTab: Int, CaseIterable, Identifiable, Hashable {
+    case dashboard
+    case countries
+    case random
     
+    var id: Int { rawValue }
+}
+
+struct MainScreen: View {
+   
+    @ObservedObject var viewModel: MainScreenViewModel
     @EnvironmentObject var router: Router
-    @EnvironmentObject var countriesService: CountriesScreenViewModel
+    
+    var dashboardViewModel: DashboardScreenViewModel = DashboardScreenViewModel()
+    var randomViewModel: RandomCountryScreenViewModel = RandomCountryScreenViewModel()
+    var countriesScreenViewModel: CountriesScreenViewModel = CountriesScreenViewModel()
     
     var body: some View {
         TabView(selection: $router.mainTabSelection) {
-            ForEach(MainScreenTabs.allCases) { tab in
+            ForEach(MainTab.allCases) { tab in
                 switch tab {
                 case .dashboard:
                     DashboardScreen().tabItem {
@@ -32,9 +36,11 @@ struct MainScreen: View {
                         Text("Dashboard")
 
                     }.tag(tab.rawValue)
+                    .environmentObject(dashboardViewModel)
                 case .countries:
                     NavigationView {
                         CountriesScreen()
+                            .environmentObject(countriesScreenViewModel)
                         Text("Select a country")
                     }
                     .tabItem {
@@ -50,8 +56,8 @@ struct MainScreen: View {
 //                        Text("Neighbours")
 //                    }
 //                    .tag(tab.rawValue)
-                case .third:
-                    ThirdScreen().tabItem {
+                case .random:
+                    RandomCountryScreen(viewModel: RandomCountryScreenViewModel()).tabItem {
                         Image(systemName: "gift")
                         Text("Random Modal")
                     }.tag(tab.rawValue)
@@ -59,13 +65,8 @@ struct MainScreen: View {
             }
         }
         .onAppear() {
-            countriesService.loadCountries()
+            countriesScreenViewModel.loadCountries()
         }
     }
 }
 
-struct MainScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MainScreen()
-    }
-}

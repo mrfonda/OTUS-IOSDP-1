@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Core
+import Resolver
 
 final class NeighboursScreenViewModel: ObservableObject {
     typealias Output = Result<NeighbourCountries, Error>

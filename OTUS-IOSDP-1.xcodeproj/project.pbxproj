@@ -15,7 +15,6 @@
 		761759F62690C06000A4259B /* CountriesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F22690C06000A4259B /* CountriesScreenViewModel.swift */; };
 		761759F72690C06000A4259B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F32690C06000A4259B /* MainScreen.swift */; };
 		76175A012690C46900A4259B /* OTUS_IOSDP_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A002690C46900A4259B /* OTUS_IOSDP_1Tests.swift */; };
-		76175A082690C47300A4259B /* CountriesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F82690C44500A4259B /* CountriesServiceTests.swift */; };
 		76175A092690C4B000A4259B /* CountriesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F22690C06000A4259B /* CountriesScreenViewModel.swift */; };
 		76175A0C2690CC7F00A4259B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 76175A0B2690CC7F00A4259B /* URLImage */; };
 		76175A0F2690DA9C00A4259B /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 76175A0E2690DA9C00A4259B /* URLImageStore */; };
@@ -24,7 +23,7 @@
 		76175A202690EF5200A4259B /* HolidaysScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A1F2690EF5200A4259B /* HolidaysScreenViewModel.swift */; };
 		76175A2A26910A9A00A4259B /* InputPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A2926910A9A00A4259B /* InputPropertyWrapper.swift */; };
 		76175A3126910B7200A4259B /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3026910B7200A4259B /* Publisher+Extensions.swift */; };
-		76175A3426914E3600A4259B /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3326914E3600A4259B /* ThirdScreen.swift */; };
+		76175A3426914E3600A4259B /* RandomCountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3326914E3600A4259B /* RandomCountryScreen.swift */; };
 		7628171326C7FB09001CC745 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7628171226C7FB09001CC745 /* Country.swift */; };
 		7628171626C802F8001CC745 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 7628171526C802F8001CC745 /* UIComponents */; };
 		7642FFF526AB334500DB937F /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7642FFF426AB334500DB937F /* Networking */; };
@@ -39,6 +38,13 @@
 		769A569726C7E76F007784DE /* Core in Resources */ = {isa = PBXBuildFile; fileRef = 769A569526C7E72B007784DE /* Core */; };
 		769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F86EF26AB234D0030F85A /* CountryScreen.swift */; };
 		769F870E26AB323E0030F85A /* CountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F870D26AB323E0030F85A /* CountryScreenViewModel.swift */; };
+		76DD2FBD26F628DB0066DCD2 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD2FBC26F628DB0066DCD2 /* MainScreenViewModel.swift */; };
+		76DD6B7526FD671300F7A2D8 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 76DD6B7426FD671300F7A2D8 /* Resolver */; };
+		76DD6B7726FD671300F7A2D8 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 76DD6B7626FD671300F7A2D8 /* Resolver-Static */; };
+		76DD6B8926FF84A000F7A2D8 /* DashboardScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8826FF84A000F7A2D8 /* DashboardScreenViewModel.swift */; };
+		76DD6B8B27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */; };
+		76DD6B8E2700421A00F7A2D8 /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */; };
+		76DD6B902700425600F7A2D8 /* RandomCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,19 @@
 			remoteInfo = "OTUS-IOSDP-1";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76DD6B7826FD671300F7A2D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7613260D26909D2A0023AD33 /* OTUS-IOSDP-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS-IOSDP-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +89,7 @@
 		76175A1F2690EF5200A4259B /* HolidaysScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysScreenViewModel.swift; sourceTree = "<group>"; };
 		76175A2926910A9A00A4259B /* InputPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPropertyWrapper.swift; sourceTree = "<group>"; };
 		76175A3026910B7200A4259B /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
-		76175A3326914E3600A4259B /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
+		76175A3326914E3600A4259B /* RandomCountryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCountryScreen.swift; sourceTree = "<group>"; };
 		7628171226C7FB09001CC745 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7628171426C8029B001CC745 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UIComponents; path = Modules/UIComponents; sourceTree = "<group>"; };
 		7642FFF626AB4DF500DB937F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -83,6 +102,11 @@
 		769F86EF26AB234D0030F85A /* CountryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreen.swift; sourceTree = "<group>"; };
 		769F870C26AB31290030F85A /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Networking; path = Modules/Networking; sourceTree = "<group>"; };
 		769F870D26AB323E0030F85A /* CountryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryScreenViewModel.swift; sourceTree = "<group>"; };
+		76DD2FBC26F628DB0066DCD2 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		76DD6B8826FF84A000F7A2D8 /* DashboardScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenViewModel.swift; sourceTree = "<group>"; };
+		76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCountryScreenViewModel.swift; sourceTree = "<group>"; };
+		76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
+		76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCountryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +116,11 @@
 			files = (
 				7628171626C802F8001CC745 /* UIComponents in Frameworks */,
 				7642FFF526AB334500DB937F /* Networking in Frameworks */,
+				76DD6B7526FD671300F7A2D8 /* Resolver in Frameworks */,
 				768F1CFB26AC89DC00B0853E /* NavigationStack in Frameworks */,
 				76175A0F2690DA9C00A4259B /* URLImageStore in Frameworks */,
 				766A1BF826C7E791000A0D65 /* Core in Frameworks */,
+				76DD6B7726FD671300F7A2D8 /* Resolver-Static in Frameworks */,
 				76175A0C2690CC7F00A4259B /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +160,7 @@
 		7613260F26909D2A0023AD33 /* OTUS-IOSDP-1 */ = {
 			isa = PBXGroup;
 			children = (
+				76DD6B8C270041F400F7A2D8 /* Services */,
 				7628171126C7FAFD001CC745 /* Models */,
 				76175A212691098E00A4259B /* Helpers */,
 				76175A1B2690EDDA00A4259B /* App */,
@@ -153,14 +180,14 @@
 		761759F02690C06000A4259B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				761759F32690C06000A4259B /* MainScreen.swift */,
+				76DD2FBB26F6287F0066DCD2 /* MainScreen */,
 				768F1D0126AF53E600B0853E /* NeighboursScreen */,
 				7642FFF826AB577200DB937F /* NewsScreen */,
 				769F86EE26AB23360030F85A /* CountryScreen */,
 				76175A102690E18100A4259B /* DashboardScreen */,
 				761759F12690C06000A4259B /* CountriesScreen */,
 				76175A1C2690EE4800A4259B /* HolidaysScreen */,
-				76175A3226914DD200A4259B /* ThirdScreen */,
+				76175A3226914DD200A4259B /* RandomScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -195,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				76175A112690E3E100A4259B /* DashboardScreen.swift */,
+				76DD6B8826FF84A000F7A2D8 /* DashboardScreenViewModel.swift */,
 			);
 			path = DashboardScreen;
 			sourceTree = "<group>";
@@ -247,12 +275,13 @@
 			path = Publisher;
 			sourceTree = "<group>";
 		};
-		76175A3226914DD200A4259B /* ThirdScreen */ = {
+		76175A3226914DD200A4259B /* RandomScreen */ = {
 			isa = PBXGroup;
 			children = (
-				76175A3326914E3600A4259B /* ThirdScreen.swift */,
+				76175A3326914E3600A4259B /* RandomCountryScreen.swift */,
+				76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */,
 			);
-			path = ThirdScreen;
+			path = RandomScreen;
 			sourceTree = "<group>";
 		};
 		7628171126C7FAFD001CC745 /* Models */ = {
@@ -290,6 +319,24 @@
 			path = CountryScreen;
 			sourceTree = "<group>";
 		};
+		76DD2FBB26F6287F0066DCD2 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				761759F32690C06000A4259B /* MainScreen.swift */,
+				76DD2FBC26F628DB0066DCD2 /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		76DD6B8C270041F400F7A2D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */,
+				76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +347,7 @@
 				7613260926909D2A0023AD33 /* Sources */,
 				7613260A26909D2A0023AD33 /* Frameworks */,
 				7613260B26909D2A0023AD33 /* Resources */,
+				76DD6B7826FD671300F7A2D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +361,8 @@
 				768F1CFA26AC89DC00B0853E /* NavigationStack */,
 				766A1BF726C7E791000A0D65 /* Core */,
 				7628171526C802F8001CC745 /* UIComponents */,
+				76DD6B7426FD671300F7A2D8 /* Resolver */,
+				76DD6B7626FD671300F7A2D8 /* Resolver-Static */,
 			);
 			productName = "OTUS-IOSDP-1";
 			productReference = 7613260D26909D2A0023AD33 /* OTUS-IOSDP-1.app */;
@@ -366,6 +416,7 @@
 			packageReferences = (
 				76175A0A2690CC7F00A4259B /* XCRemoteSwiftPackageReference "url-image" */,
 				768F1CF926AC89DC00B0853E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				76DD6B7026FD671300F7A2D8 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 7613260E26909D2A0023AD33 /* Products */;
 			projectDirPath = "";
@@ -405,17 +456,22 @@
 				761759F72690C06000A4259B /* MainScreen.swift in Sources */,
 				769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */,
 				7642FFFC26AB57C600DB937F /* NewsScreenViewModel.swift in Sources */,
+				76DD6B902700425600F7A2D8 /* RandomCountryService.swift in Sources */,
 				7649104126AB6DC60087784B /* RandomAccessCollection.swift in Sources */,
 				7628171326C7FB09001CC745 /* Country.swift in Sources */,
 				768F1CFE26AF29BE00B0853E /* NeighboursScreenViewModel.swift in Sources */,
 				76175A2A26910A9A00A4259B /* InputPropertyWrapper.swift in Sources */,
 				761759F52690C06000A4259B /* CountriesScreen.swift in Sources */,
+				76DD2FBD26F628DB0066DCD2 /* MainScreenViewModel.swift in Sources */,
 				76175A3126910B7200A4259B /* Publisher+Extensions.swift in Sources */,
 				7642FFFA26AB578200DB937F /* NewsScreen.swift in Sources */,
 				76175A122690E3E100A4259B /* DashboardScreen.swift in Sources */,
+				76DD6B8E2700421A00F7A2D8 /* CountriesService.swift in Sources */,
 				7642FFF726AB4DF500DB937F /* AppSettings.swift in Sources */,
+				76DD6B8B27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift in Sources */,
 				761759F42690C06000A4259B /* Router.swift in Sources */,
-				76175A3426914E3600A4259B /* ThirdScreen.swift in Sources */,
+				76175A3426914E3600A4259B /* RandomCountryScreen.swift in Sources */,
+				76DD6B8926FF84A000F7A2D8 /* DashboardScreenViewModel.swift in Sources */,
 				761759F62690C06000A4259B /* CountriesScreenViewModel.swift in Sources */,
 				769F870E26AB323E0030F85A /* CountryScreenViewModel.swift in Sources */,
 				76175A1E2690EE7200A4259B /* HolidaysScreen.swift in Sources */,
@@ -429,7 +485,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76175A082690C47300A4259B /* CountriesServiceTests.swift in Sources */,
 				76175A092690C4B000A4259B /* CountriesScreenViewModel.swift in Sources */,
 				76175A012690C46900A4259B /* OTUS_IOSDP_1Tests.swift in Sources */,
 			);
@@ -695,6 +750,14 @@
 				minimumVersion = 1.0.3;
 			};
 		};
+		76DD6B7026FD671300F7A2D8 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -724,6 +787,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 768F1CF926AC89DC00B0853E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
+		};
+		76DD6B7426FD671300F7A2D8 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76DD6B7026FD671300F7A2D8 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		76DD6B7626FD671300F7A2D8 /* Resolver-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76DD6B7026FD671300F7A2D8 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = "Resolver-Static";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

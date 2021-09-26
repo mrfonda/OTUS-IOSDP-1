@@ -12,6 +12,7 @@ public struct Country: Identifiable {
     public let id: String
     public let name: String
     public let imageURL: URL?
+    
     init(coreCountry: Core.Country) {
         id = coreCountry.id
         name = coreCountry.name

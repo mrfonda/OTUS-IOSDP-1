@@ -9,14 +9,18 @@ import Combine
 import Foundation
 import UIKit
 import Core
+import Resolver
 
 class CountriesScreenViewModel: ObservableObject {
-    
     @Published var countries: [Country] = []
-    
     @Published var filtered: [Country] = []
     
-    @Injected var loader: CountriesLoader!
+    @Injected var countriesService: CountriesService
+    
+    init() {
+        countries = countriesService.countries
+        filtered = countries
+    }
     
     var searchText: String = "" {
         didSet {
@@ -45,9 +49,10 @@ class CountriesScreenViewModel: ObservableObject {
     }
     
     func loadCountries() {
-        loader.loadCountries { [weak self] countries in
-            self?.countries = countries.map{Country(coreCountry: $0)}
-            self?.filtered = self?.countries ?? .init()
+        countriesService.loadCountries { [weak self] in
+            guard let self = self else { return }
+            self.countries = self.countriesService.countries
+            self.filtered = self.countries
         }
     }
 }

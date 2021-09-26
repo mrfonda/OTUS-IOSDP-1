@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Core
+import Resolver
 
 class HolidaysScreenViewModel: ObservableObject {
     typealias Output = Result<[Holiday], Error>
@@ -17,7 +18,7 @@ class HolidaysScreenViewModel: ObservableObject {
     @Input var countryCode = ""
     @Input var year = Calendar.current.component(.year, from: Date())
     
-    @Injected var loader: HolidaysLoader!
+    @Injected var loader: HolidaysLoader
 
     init(countryCode: String) {
         self.countryCode = countryCode
@@ -44,7 +45,7 @@ private extension HolidaysScreenViewModel {
             .removeDuplicates()
             .combineLatest($year)
             .compactMap { [loader] query, filter in
-                loader?.loadHolidays(
+                loader.loadHolidays(
                     forCountry: self.countryCode,
                     year: self.year)
                 .asResult()

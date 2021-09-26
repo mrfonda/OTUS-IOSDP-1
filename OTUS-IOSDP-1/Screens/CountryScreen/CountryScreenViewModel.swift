@@ -33,8 +33,7 @@ final class CountryScreenViewModel: ObservableObject {
     init(country: Country) {
         self.country = country
         tabs = [
-            Tab(id: 0, title: "holidays", type: .holidays(code: country.id)),
-//            Tab(id: 1, title: "neighbours", type: .neighbours(code: country.id)) // api is down
+            Tab(id: 0, title: "holidays", type: .holidays(code: country.id))
         ]
         
         tabs.append(
