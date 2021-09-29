@@ -48,7 +48,13 @@ struct DashboardScreen: View {
             }
         }
         .onAppear() {
-            viewModel.fetchRandomCountry()
+            if #available(iOS 15.0, *) {
+                async {
+                    await viewModel.fetchRandomCountry()
+                }
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }

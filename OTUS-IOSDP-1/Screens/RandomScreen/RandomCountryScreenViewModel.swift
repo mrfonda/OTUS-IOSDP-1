@@ -15,10 +15,8 @@ class RandomCountryScreenViewModel: ObservableObject {
     @Injected var randomCountryService: RandomCountryService
     @Published var router: Router = Resolver.resolve()
     
-    func fetchRandomCountry() {
-        randomCountryService.fetchRandomCountry { [weak self] country in
-            self?.randomCountry = country
-        }
+    func fetchRandomCountry() async {
+        randomCountry = await randomCountryService.fetchRandomCountry()
     }
     
     func open() {

@@ -7,7 +7,12 @@
 
 import Combine
 import Foundation
+#if !os(macOS)
 import UIKit
+#else
+import AppKit
+#endif
+
 import Core
 import Resolver
 
@@ -36,10 +41,17 @@ class CountriesScreenViewModel: ObservableObject {
         }
     }
     
+#if !os(macOS)
+    @available(iOS 15.0, *)
     @objc func textFieldDidChange(_ tf: UITextField) {
         searchText = tf.text ?? ""
     }
-    
+    #else
+    @available(macOS 12.0, *)
+    @objc func textFieldDidChange(_ tf: NSTextField) {
+        searchText = tf.stringValue ?? ""
+    }
+    #endif
     var randomCountry: Country? { countries.randomElement() }
     
     func country(byCode: String) -> Country? {
@@ -48,11 +60,10 @@ class CountriesScreenViewModel: ObservableObject {
         }
     }
     
-    func loadCountries() {
-        countriesService.loadCountries { [weak self] in
-            guard let self = self else { return }
-            self.countries = self.countriesService.countries
-            self.filtered = self.countries
-        }
+    func loadCountries() async {
+        
+        self.countries = await countriesService.loadCountries()
+        self.filtered = self.countries
+        
     }
 }

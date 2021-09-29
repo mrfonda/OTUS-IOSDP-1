@@ -16,7 +16,14 @@ struct RandomCountryScreen: View {
         
         Button {
             isShowing.toggle()
-            viewModel.fetchRandomCountry()
+            if #available(iOS 15.0, *) {
+                async {
+                    await viewModel.fetchRandomCountry()
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            
         } label: {
             Text("Show Random").font(.largeTitle)
         }.fullScreenCover(isPresented: $isShowing) {

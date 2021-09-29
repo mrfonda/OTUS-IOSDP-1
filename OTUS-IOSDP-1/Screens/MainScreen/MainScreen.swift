@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Combine
-import NavigationStack
 
 enum MainTab: Int, CaseIterable, Identifiable, Hashable {
     case dashboard
@@ -65,7 +64,13 @@ struct MainScreen: View {
             }
         }
         .onAppear() {
-            countriesScreenViewModel.loadCountries()
+            if #available(iOS 15.0, macOS 12.0, *) {
+                async {
+                    await countriesScreenViewModel.loadCountries()
+                }
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }

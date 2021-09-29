@@ -34,7 +34,6 @@
 		766A1BF826C7E791000A0D65 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 766A1BF726C7E791000A0D65 /* Core */; };
 		768F1CFB26AC89DC00B0853E /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 768F1CFA26AC89DC00B0853E /* NavigationStack */; };
 		768F1CFE26AF29BE00B0853E /* NeighboursScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1CFD26AF29BD00B0853E /* NeighboursScreenViewModel.swift */; };
-		768F1D0326AF53FE00B0853E /* NeighboursScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1D0226AF53FE00B0853E /* NeighboursScreen.swift */; };
 		769A569726C7E76F007784DE /* Core in Resources */ = {isa = PBXBuildFile; fileRef = 769A569526C7E72B007784DE /* Core */; };
 		769F86F026AB234D0030F85A /* CountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F86EF26AB234D0030F85A /* CountryScreen.swift */; };
 		769F870E26AB323E0030F85A /* CountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F870D26AB323E0030F85A /* CountryScreenViewModel.swift */; };
@@ -45,6 +44,33 @@
 		76DD6B8B27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */; };
 		76DD6B8E2700421A00F7A2D8 /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */; };
 		76DD6B902700425600F7A2D8 /* RandomCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */; };
+		76ED51612704E9DB004ECE29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED51602704E9DB004ECE29 /* ContentView.swift */; };
+		76ED51632704E9E0004ECE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76ED51622704E9E0004ECE29 /* Assets.xcassets */; };
+		76ED51662704E9E0004ECE29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76ED51652704E9E0004ECE29 /* Preview Assets.xcassets */; };
+		76ED516A2704EA2D004ECE29 /* OTUS_IOSDP_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7613261026909D2A0023AD33 /* OTUS_IOSDP_1App.swift */; };
+		76ED516B2704EC05004ECE29 /* RandomCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */; };
+		76ED516C2704EC05004ECE29 /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */; };
+		76ED516D2704EC09004ECE29 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7628171226C7FB09001CC745 /* Country.swift */; };
+		76ED516E2704EC10004ECE29 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A3026910B7200A4259B /* Publisher+Extensions.swift */; };
+		76ED516F2704EC10004ECE29 /* RandomAccessCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649104026AB6DC60087784B /* RandomAccessCollection.swift */; };
+		76ED51702704EC10004ECE29 /* InputPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A2926910A9A00A4259B /* InputPropertyWrapper.swift */; };
+		76ED51712704EC13004ECE29 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759EE2690C06000A4259B /* Router.swift */; };
+		76ED51722704EC1C004ECE29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7613261726909D2D0023AD33 /* Preview Assets.xcassets */; };
+		76ED51732704EC27004ECE29 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFF626AB4DF500DB937F /* AppSettings.swift */; };
+		76ED51742704EC46004ECE29 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD2FBC26F628DB0066DCD2 /* MainScreenViewModel.swift */; };
+		76ED51752704EC46004ECE29 /* NewsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFFB26AB57C600DB937F /* NewsScreenViewModel.swift */; };
+		76ED51762704EC46004ECE29 /* HolidaysScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A1F2690EF5200A4259B /* HolidaysScreenViewModel.swift */; };
+		76ED51772704EC46004ECE29 /* CountriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759EF2690C06000A4259B /* CountriesScreen.swift */; };
+		76ED51782704EC46004ECE29 /* NeighboursScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F1CFD26AF29BD00B0853E /* NeighboursScreenViewModel.swift */; };
+		76ED517A2704EC46004ECE29 /* DashboardScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8826FF84A000F7A2D8 /* DashboardScreenViewModel.swift */; };
+		76ED517B2704EC46004ECE29 /* HolidaysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A1D2690EE7200A4259B /* HolidaysScreen.swift */; };
+		76ED517C2704EC46004ECE29 /* RandomCountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */; };
+		76ED517E2704EC46004ECE29 /* CountriesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F22690C06000A4259B /* CountriesScreenViewModel.swift */; };
+		76ED517F2704EC46004ECE29 /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175A112690E3E100A4259B /* DashboardScreen.swift */; };
+		76ED51802704EC46004ECE29 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642FFF926AB578200DB937F /* NewsScreen.swift */; };
+		76ED51812704EC46004ECE29 /* CountryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F86EF26AB234D0030F85A /* CountryScreen.swift */; };
+		76ED51822704EC46004ECE29 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761759F32690C06000A4259B /* MainScreen.swift */; };
+		76ED51832704EC46004ECE29 /* CountryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F870D26AB323E0030F85A /* CountryScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +133,11 @@
 		76DD6B8A27003F3200F7A2D8 /* RandomCountryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCountryScreenViewModel.swift; sourceTree = "<group>"; };
 		76DD6B8D2700421A00F7A2D8 /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		76DD6B8F2700425600F7A2D8 /* RandomCountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCountryService.swift; sourceTree = "<group>"; };
+		76ED515C2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS-IOSDP-1-MACOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76ED515E2704E9DB004ECE29 /* OTUS_IOSDP_1_MACOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTUS_IOSDP_1_MACOSApp.swift; sourceTree = "<group>"; };
+		76ED51602704E9DB004ECE29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76ED51622704E9E0004ECE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76ED51652704E9E0004ECE29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +163,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76ED51592704E9DB004ECE29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +181,7 @@
 				769A569526C7E72B007784DE /* Core */,
 				7613260F26909D2A0023AD33 /* OTUS-IOSDP-1 */,
 				761759FF2690C46900A4259B /* OTUS-IOSDP-1Tests */,
+				76ED515D2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS */,
 				7613260E26909D2A0023AD33 /* Products */,
 				76175A0D2690DA9C00A4259B /* Frameworks */,
 			);
@@ -153,6 +192,7 @@
 			children = (
 				7613260D26909D2A0023AD33 /* OTUS-IOSDP-1.app */,
 				761759FE2690C46900A4259B /* OTUS-IOSDP-1Tests.xctest */,
+				76ED515C2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +377,25 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		76ED515D2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS */ = {
+			isa = PBXGroup;
+			children = (
+				76ED515E2704E9DB004ECE29 /* OTUS_IOSDP_1_MACOSApp.swift */,
+				76ED51602704E9DB004ECE29 /* ContentView.swift */,
+				76ED51622704E9E0004ECE29 /* Assets.xcassets */,
+				76ED51642704E9E0004ECE29 /* Preview Content */,
+			);
+			path = "OTUS-IOSDP-1-MACOS";
+			sourceTree = "<group>";
+		};
+		76ED51642704E9E0004ECE29 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				76ED51652704E9E0004ECE29 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,13 +445,30 @@
 			productReference = 761759FE2690C46900A4259B /* OTUS-IOSDP-1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		76ED515B2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76ED51672704E9E0004ECE29 /* Build configuration list for PBXNativeTarget "OTUS-IOSDP-1-MACOS" */;
+			buildPhases = (
+				76ED51582704E9DB004ECE29 /* Sources */,
+				76ED51592704E9DB004ECE29 /* Frameworks */,
+				76ED515A2704E9DB004ECE29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OTUS-IOSDP-1-MACOS";
+			productName = "OTUS-IOSDP-1-MACOS";
+			productReference = 76ED515C2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		7613260526909D2A0023AD33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					7613260C26909D2A0023AD33 = {
@@ -401,6 +477,9 @@
 					761759FD2690C46900A4259B = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 7613260C26909D2A0023AD33;
+					};
+					76ED515B2704E9DB004ECE29 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -424,6 +503,7 @@
 			targets = (
 				7613260C26909D2A0023AD33 /* OTUS-IOSDP-1 */,
 				761759FD2690C46900A4259B /* OTUS-IOSDP-1Tests */,
+				76ED515B2704E9DB004ECE29 /* OTUS-IOSDP-1-MACOS */,
 			);
 		};
 /* End PBXProject section */
@@ -443,6 +523,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ED515A2704E9DB004ECE29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ED51662704E9E0004ECE29 /* Preview Assets.xcassets in Resources */,
+				76ED51722704EC1C004ECE29 /* Preview Assets.xcassets in Resources */,
+				76ED51632704E9E0004ECE29 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +567,6 @@
 				76175A1E2690EE7200A4259B /* HolidaysScreen.swift in Sources */,
 				7613261126909D2A0023AD33 /* OTUS_IOSDP_1App.swift in Sources */,
 				76175A202690EF5200A4259B /* HolidaysScreenViewModel.swift in Sources */,
-				768F1D0326AF53FE00B0853E /* NeighboursScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +576,37 @@
 			files = (
 				76175A092690C4B000A4259B /* CountriesScreenViewModel.swift in Sources */,
 				76175A012690C46900A4259B /* OTUS_IOSDP_1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ED51582704E9DB004ECE29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ED516B2704EC05004ECE29 /* RandomCountryService.swift in Sources */,
+				76ED51742704EC46004ECE29 /* MainScreenViewModel.swift in Sources */,
+				76ED517E2704EC46004ECE29 /* CountriesScreenViewModel.swift in Sources */,
+				76ED51772704EC46004ECE29 /* CountriesScreen.swift in Sources */,
+				76ED517F2704EC46004ECE29 /* DashboardScreen.swift in Sources */,
+				76ED516F2704EC10004ECE29 /* RandomAccessCollection.swift in Sources */,
+				76ED51612704E9DB004ECE29 /* ContentView.swift in Sources */,
+				76ED517A2704EC46004ECE29 /* DashboardScreenViewModel.swift in Sources */,
+				76ED51782704EC46004ECE29 /* NeighboursScreenViewModel.swift in Sources */,
+				76ED51812704EC46004ECE29 /* CountryScreen.swift in Sources */,
+				76ED51762704EC46004ECE29 /* HolidaysScreenViewModel.swift in Sources */,
+				76ED51822704EC46004ECE29 /* MainScreen.swift in Sources */,
+				76ED51702704EC10004ECE29 /* InputPropertyWrapper.swift in Sources */,
+				76ED51752704EC46004ECE29 /* NewsScreenViewModel.swift in Sources */,
+				76ED51712704EC13004ECE29 /* Router.swift in Sources */,
+				76ED516C2704EC05004ECE29 /* CountriesService.swift in Sources */,
+				76ED51802704EC46004ECE29 /* NewsScreen.swift in Sources */,
+				76ED516D2704EC09004ECE29 /* Country.swift in Sources */,
+				76ED517C2704EC46004ECE29 /* RandomCountryScreenViewModel.swift in Sources */,
+				76ED51832704EC46004ECE29 /* CountryScreenViewModel.swift in Sources */,
+				76ED516E2704EC10004ECE29 /* Publisher+Extensions.swift in Sources */,
+				76ED51732704EC27004ECE29 /* AppSettings.swift in Sources */,
+				76ED517B2704EC46004ECE29 /* HolidaysScreen.swift in Sources */,
+				76ED516A2704EA2D004ECE29 /* OTUS_IOSDP_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -607,7 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -701,6 +821,66 @@
 			};
 			name = Release;
 		};
+		76ED51682704E9E0004ECE29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OTUS-IOSDP-1-MACOS/Preview Content\"";
+				DEVELOPMENT_TEAM = JM5GZMKUEC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "localhome.OTUS-IOSDP-1-MACOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		76ED51692704E9E0004ECE29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OTUS-IOSDP-1-MACOS/Preview Content\"";
+				DEVELOPMENT_TEAM = JM5GZMKUEC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "localhome.OTUS-IOSDP-1-MACOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -727,6 +907,15 @@
 			buildConfigurations = (
 				76175A062690C46900A4259B /* Debug */,
 				76175A072690C46900A4259B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76ED51672704E9E0004ECE29 /* Build configuration list for PBXNativeTarget "OTUS-IOSDP-1-MACOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76ED51682704E9E0004ECE29 /* Debug */,
+				76ED51692704E9E0004ECE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

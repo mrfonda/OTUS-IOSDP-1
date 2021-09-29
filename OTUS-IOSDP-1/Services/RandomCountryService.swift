@@ -15,16 +15,13 @@ class RandomCountryService {
         countriesService.countries.randomElement()
     }
     
-    func fetchRandomCountry(completion: @escaping (Country?)->Void) {
+    func fetchRandomCountry() async -> Country?{
         guard !countriesService.countries.isEmpty
         else {
-            countriesService.loadCountries(
-            completion: { [weak self] in
-                completion(self?.randomizeFromService())
-            })
-            return
+            await countriesService.loadCountries()
+            return randomizeFromService()
         }
         
-        completion(randomizeFromService())
+        return randomizeFromService()
     }
 }

@@ -110,8 +110,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/HolidaysScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "OTUS-IOSDP-1/Screens/HolidaysScreen/HolidaysScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -754,38 +754,6 @@
             endingLineNumber = "64"
             landmarkName = "loadNeigbours(forCountry:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "43438F87-1CB2-4091-A40D-20809AA64482 - 7937194eb626162"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "2435">
-               </Location>
-               <Location
-                  uuid = "43438F87-1CB2-4091-A40D-20809AA64482 - b3916d819e9f501a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data) -&gt; Foundation.Data in Core.GeoDataSourceNeighbourCountriesLoader.loadNeigbours(forCountry: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Core.NeighbourCountry&gt;, Swift.Error&gt;"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/Modules/Core/Sources/Core/Networking/Neighbours/NeighboursLoader.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "79">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -855,54 +823,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC7ED3A3-EECE-4546-8EA9-DDE79D0B863E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "fetchRandomCountry()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EC7ED3A3-EECE-4546-8EA9-DDE79D0B863E - 9df3f2a0a3087437"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OTUS_IOSDP_1.DashboardScreenViewModel.fetchRandomCountry() -&gt; ()"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  uuid = "EC7ED3A3-EECE-4546-8EA9-DDE79D0B863E - 2de4dd99818eb849"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;OTUS_IOSDP_1.Country&gt;) -&gt; () in OTUS_IOSDP_1.DashboardScreenViewModel.fetchRandomCountry() -&gt; ()"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "97">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4AD848ED-4FBA-49F9-BAD5-1F78A82F1DB1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -914,38 +834,6 @@
             endingLineNumber = "35"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "4AD848ED-4FBA-49F9-BAD5-1F78A82F1DB1 - 324bb0585cd21ab1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;)&gt; in OTUS_IOSDP_1.DashboardScreen.body.getter : some"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "2344">
-               </Location>
-               <Location
-                  uuid = "4AD848ED-4FBA-49F9-BAD5-1F78A82F1DB1 - 324bb0585cd21ab1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;)&gt; in OTUS_IOSDP_1.DashboardScreen.body.getter : some"
-                  moduleName = "OTUS-IOSDP-1"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladislavdorfman/Developer/Training/OTUS%20-%20iOS%20Developer%20Professional/OTUS-IOSDP-1/OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "3388">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -968,7 +856,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "78049F7A-D405-476B-B461-5855C9C732E7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
@@ -990,8 +878,8 @@
             filePath = "OTUS-IOSDP-1/App/OTUS_IOSDP_1App.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "registerAllServices()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1006,8 +894,8 @@
             filePath = "OTUS-IOSDP-1/App/OTUS_IOSDP_1App.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "registerAllServices()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1016,14 +904,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A7F8920A-D37E-4CD7-B17A-65159ABF6022"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "openLast()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1032,15 +920,95 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7896DB0D-22D4-47B8-B743-777B9FFEF35F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "openRandom()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E5F3CF8-C109-420B-95CE-B84AC94BDFC7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreenViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "openRandom()"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchRandomCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22837FC7-755C-4B66-BCE0-462C7FD3BFC3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDFC266E-B603-41B4-85AC-7EF7C9CCF42D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Screens/DashboardScreen/DashboardScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA54D90E-21EC-4C87-A83E-D6AA2D1D88B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Services/RandomCountryService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchRandomCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FC92994-70F2-46A7-8F76-82156B04B390"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OTUS-IOSDP-1/Services/CountriesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "loadCountries()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

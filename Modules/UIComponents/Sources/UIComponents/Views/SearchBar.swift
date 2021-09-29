@@ -4,8 +4,6 @@
 //
 //  Created by Vladislav Dorfman on 04/07/2021.
 //
-#if !os(macOS)
-
 import SwiftUI
 import UIKit
 import Combine
@@ -76,5 +74,3 @@ public struct SearchView: UIViewRepresentable {
     public typealias UIViewType = UISearchBar
 }
 
-
-#endif

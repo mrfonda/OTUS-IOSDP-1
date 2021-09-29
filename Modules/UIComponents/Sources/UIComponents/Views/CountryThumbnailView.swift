@@ -7,7 +7,7 @@
 #if !os(macOS)
 
 import SwiftUI
-import URLImage
+//import URLImage
 
 public struct CountryThumbnailView: View {
     public let id: String
@@ -23,11 +23,12 @@ public struct CountryThumbnailView: View {
     public var body: some View {
         HStack(alignment: .center, spacing: 16) {
             if let url = imageURL {
-                URLImage(url) { image in
-                    image
-                        .resizable()
+                if #available(iOS 15.0, *) {
+                    AsyncImage(url: url)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 32, height: 32, alignment: .center)
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             

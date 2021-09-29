@@ -9,9 +9,14 @@ import Foundation
 
 public protocol CountriesLoader {
     func loadCountries(completion: @escaping ([Country])->Void)
+    func loadCountries() async -> [Country]
 }
 
 public class CountriesLocaleLoader: CountriesLoader {
+    public func loadCountries() async -> [Country] {
+        return loadLocaleCountries()
+    }
+    
     public func loadCountries(completion: @escaping ([Country]) -> Void) {
         completion(loadLocaleCountries())
     }

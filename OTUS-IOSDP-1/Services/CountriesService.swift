@@ -14,10 +14,9 @@ class CountriesService: ObservableObject {
 
     @Injected var loader: CountriesLoader
 
-    func loadCountries(completion: @escaping ()->Void) {
-        loader.loadCountries { [weak self] countries in
-            self?.countries = countries.map { Country(coreCountry: $0) }
-            completion()
-        }
+    func loadCountries() async -> [Country]  {
+        countries = await loader.loadCountries().map { Country(coreCountry: $0) }
+
+        return countries
     }
 }
